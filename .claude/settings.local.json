@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /c/ -maxdepth 4 -name \"esp_lcd_panel_ssd1306.c\" -type f 2>/dev/null | head -5)",
+      "Read(//c//**)",
+      "Bash(find / -maxdepth 6 -name \"esp_lcd_panel_ssd1306.c\" -type f 2>/dev/null | head -5)",
+      "Read(//e//**)"
+    ]
+  }
+}
