@@ -2,7 +2,7 @@
  * @Author: 思夜雪
  * @Date: 2026-06-14 23:46:57
  * @LastEditors: Do not edit
- * @LastEditTime: 2026-06-16 15:01:44
+ * @LastEditTime: 2026-06-23 12:41:09
  * @Description: 
  * @FilePath: \hello_world\main\distance\mqtt.c
  */
@@ -15,14 +15,15 @@
 #include <string.h>
 #include "mbedtls/md.h"
 #include "mbedtls/base64.h"
+#include "sdkconfig.h"
 
 static const char *TAG = "MQTT";
 
 static esp_mqtt_client_handle_t mqtt_handle = NULL;
 
-#define ONENET_PRODUCT_ID "d17QeNOY7J"
-#define ONENET_DEVICE_NAME "ESP32"
-#define ONENET_TOKEN "version=2018-10-31&res=products%2Fd17QeNOY7J%2Fdevices%2FESP32&et=4102444799&method=md5&sign=EXGF869KC2DDqjqq4KntvA%3D%3D"
+#define ONENET_PRODUCT_ID CONFIG_ONENET_PRODUCT_ID
+#define ONENET_DEVICE_NAME CONFIG_ONENET_DEVICE_NAME
+#define ONENET_TOKEN CONFIG_ONENET_TOKEN
 
 //#define MQTT_BROKER_URI    "mqtt://218.201.45.2:1883"
 

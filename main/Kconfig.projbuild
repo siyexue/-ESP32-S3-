@@ -1,0 +1,37 @@
+menu "Project Configuration"
+
+    menu "Wi-Fi Settings"
+        config WIFI_SSID
+            string "Wi-Fi SSID"
+            default "your_ssid"
+            help
+                Wi-Fi 网络名称(SSID)
+
+        config WIFI_PASSWORD
+            string "Wi-Fi Password"
+            default "your_password"
+            help
+                Wi-Fi 密码
+    endmenu
+
+    menu "OneNET MQTT Settings"
+        config ONENET_PRODUCT_ID
+            string "OneNET Product ID"
+            default ""
+            help
+                OneNET 产品 ID
+
+        config ONENET_DEVICE_NAME
+            string "OneNET Device Name"
+            default ""
+            help
+                OneNET 设备名称
+
+        config ONENET_TOKEN
+            string "OneNET Token"
+            default ""
+            help
+                OneNET 设备鉴权 Token(完整字符串)
+    endmenu
+
+endmenu

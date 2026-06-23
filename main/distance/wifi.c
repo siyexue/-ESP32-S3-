@@ -11,10 +11,11 @@
 #include "freertos/projdefs.h"
 #include "nvs.h"
 #include "nvs_flash.h"
+#include "sdkconfig.h"
 static const char *TAG = "WIFI";
 
-#define wifi_id "jinse"
-#define wifi_password "20040625"
+#define wifi_id CONFIG_WIFI_SSID
+#define wifi_password CONFIG_WIFI_PASSWORD
 
 static EventGroupHandle_t evt_handle;
 #define wifi_connect BIT0

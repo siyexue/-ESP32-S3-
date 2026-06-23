@@ -12,8 +12,8 @@
 #include "soc/gpio_num.h"
 
 /* 呼吸灯模式标志：0=呼吸循环，1=BLE 固定亮度 */
-static uint8_t s_ble_mode = 0;
-static uint8_t s_current_duty = 0;
+static volatile uint8_t s_ble_mode = 0;
+static volatile uint8_t s_current_duty = 0;
 
 void pwm_breath_led_init(void)
 {

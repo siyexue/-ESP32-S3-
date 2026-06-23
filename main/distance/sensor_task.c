@@ -2,7 +2,7 @@
  * @Author: 思夜雪
  * @Date: 2026-06-16 20:55:19
  * @LastEditors: Do not edit
- * @LastEditTime: 2026-06-16 23:13:34
+ * @LastEditTime: 2026-06-23 12:40:28
  * @Description: 
  * @FilePath: \hello_world\main\distance\sensor_task.c
  */
@@ -18,9 +18,10 @@
 #include "sensor_task.h"
 #include "../Board/dht11.h"
 #include "mqtt.h"
+#include "sdkconfig.h"
 
 #define sensor_data_t dht11_data_t
-#define TOPIC  "$sys/d17QeNOY7J/ESP32/thing/property/post"
+#define TOPIC  "$sys/" CONFIG_ONENET_PRODUCT_ID "/" CONFIG_ONENET_DEVICE_NAME "/thing/property/post"
 
 static const char * TAG = "sensor";
 
